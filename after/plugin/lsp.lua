@@ -30,6 +30,7 @@ require('mason-lspconfig').setup({
     'clangd',
     'jsonls',
     'dockerls',
+    'prismals',
   },
   handlers = {
     function(server)
