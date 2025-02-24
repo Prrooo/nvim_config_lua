@@ -31,6 +31,7 @@ require('mason-lspconfig').setup({
     'jsonls',
     'dockerls',
     'prismals',
+    'ast_grep',
   },
   handlers = {
     function(server)

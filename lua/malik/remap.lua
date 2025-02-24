@@ -15,6 +15,7 @@ vim.keymap.set("n", "<leader>/", "vgc", {remap = true, desc = "comment line" })
 --vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to window above" })
 --vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
+vim.opt.guicursor = 'a:block'  -- Lua
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
