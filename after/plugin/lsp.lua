@@ -1,8 +1,7 @@
-
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP keybindings',
   callback = function(event)
-    local opts = {buffer = event.buf}
+    local opts = { buffer = event.buf }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -32,6 +31,7 @@ require('mason-lspconfig').setup({
     'dockerls',
     'prismals',
     'ast_grep',
+    'html',
   },
   handlers = {
     function(server)
@@ -48,7 +48,7 @@ require('mason-lspconfig').setup({
               version = 'LuaJIT',
             },
             diagnostics = {
-              globals = {'vim'}
+              globals = { 'vim' }
             },
             workspace = {
               library = {
@@ -63,16 +63,16 @@ require('mason-lspconfig').setup({
 })
 
 local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
 --- loads custom snippets from friendly-snippets
 -- require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
   sources = {
-    {name = 'path'},
-    {name = 'nvim_lsp'},
-    {name = 'nvim_lua'},
+    { name = 'path' },
+    { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
     -- {name = 'buffer', keyword_length = 3},
     -- {name = 'luasnip', keyword_length = 2},
   },

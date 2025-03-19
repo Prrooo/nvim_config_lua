@@ -7,6 +7,10 @@ vim.keymap.set("n", "<leader>c", ":bd<CR>", { desc = "Close current buffer" })
 vim.keymap.set("v", "<leader>/", "gc", {remap = true, desc = "comment line" })
 vim.keymap.set("n", "<leader>/", "vgc", {remap = true, desc = "comment line" })
 
+-- custome shortcut to exit outof terminal mode using ctrl+w , e
+vim.api.nvim_set_keymap('t', '<C-w>e', '<C-\\><C-n>', { noremap = true, silent = true })
+-- and Ctrl+w ,h,j,k,l to change the perticular buffer
+
 -- <C-q> to enter the visual-block
 -- o to change the direciton of selection in visual mode
 
